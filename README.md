@@ -19,9 +19,7 @@ A videojs  (version 4.12.7 but works with version 3.x.x and 4.x.x) plugin to tra
 <script src="video.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script src="vjs_tracker.js"></script>
-
 ```
-
 3. Configure the plugin while initializing the player.
 
 ```
@@ -77,8 +75,7 @@ Please check examples/tracker.html for sample configuration.
 ## Tips
 
 - It has been observed that with the open source streaming tools we use, on a rare occasion streaming fails and the player receives huge numbers as video duration. To avoid this, it's adviced to store the video duration in the DB on server.
-- 'progress' can be calculated using 'previous_position', 'current_position' and 'video_duration' fields on the server as well.
-   Just take care that it never exceeds 100 and cant be negative.
+- 'progress' can be calculated using 'previous_position', 'current_position' and 'video_duration' fields on the server as well. Just take care that it never exceeds 100 and cant be negative.
 
 
 ## Contributing
