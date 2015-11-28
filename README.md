@@ -36,6 +36,10 @@ A videojs  (version 4.12.7 but works with version 3.x.x and 4.x.x) plugin to tra
                     resume_from_last: true,
                     debug: true,
                     frequency: 5,
+                    additional_data: {
+                      user_email: "this@that.com",
+                      user_locale: "en-US"
+                    }
                   });
 
         });
@@ -53,6 +57,7 @@ Please check examples/tracker.html for sample configuration.
 | resume_from_last | Should the playback start from the last left place? (true/false - default is false). The playback resumes based on 'progress' field's value. |
 | frequency | How frequently the progress info should be sent to the url (default - 10 ie every 10 secs) |
 | progress_only | If set to true, only progress info is sent to server and it is sent only when there is some progress made. (true/false - default is false). Use this if you only want progress but not session time spent. |
+| additional_data | If you like to pass any additional params along with progress info, they can be set during initialization. (any json/object) |
 
 ## Information Received By Server 
 
@@ -62,7 +67,8 @@ Please check examples/tracker.html for sample configuration.
     current_position: ,
     progress: ,
     video_duration: ,
-    total_session_duration:}
+    total_session_duration:,
+    additional_data: ...}
 
 ```
 | Param | Explanation |
@@ -73,6 +79,7 @@ Please check examples/tracker.html for sample configuration.
 | progress | The overall percentage of video is watched so far (percentage | max value is 100). This just means the highest point in the timeline so far. |
 | video_duration | Total video length (in secs) |
 | total_session_duration | Total amount of time spent watched in this session (in secs.). This is culumative and calcualtes the replays, seeking back and etc. |
+| additional_data | additional data initialized |
 
 ## Tips
 
